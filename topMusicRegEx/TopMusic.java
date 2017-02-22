@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import utiles.Menu;
 
 /**
- * TopMusic. Implementa un programa que gestione una lista de las canciones mÃ¡s
- * escuchadas. El usuario podrÃ¡: a. AÃ±adir una canciÃ³n (en una posiciÃ³n) al
- * TopMusic. b. Sacar un elemento del TopMusic. c. Subir un puesto en el
- * TopMusic. d. Bajar un puesto en el TopMusic. e. Mostrar la lista TopMusic. f.
- * Mostrar la canciÃ³n mÃ¡s escuchada. Sobre la canciÃ³n se almacenarÃ¡ el
- * tÃ­tulo, artista o grupo y aÃ±o de grabaciÃ³n.
+ * TopMusic. Implementa un programa que gestione una lista de las canciones
+ * mÃ¡s escuchadas. El usuario podrÃ¡: a. AÃ±adir una canciÃ³n (en una
+ * posiciÃ³n) al TopMusic. b. Sacar un elemento del TopMusic. c. Subir un
+ * puesto en el TopMusic. d. Bajar un puesto en el TopMusic. e. Mostrar la lista
+ * TopMusic. f. Mostrar la canciÃ³n mÃ¡s escuchada. Sobre la canciÃ³n se
+ * almacenarÃ¡ el tÃ­tulo, artista o grupo y aÃ±o de grabaciÃ³n.
  * 
  * @author Miguel Ã�ngel GavilÃ¡n Merino
  *
@@ -53,7 +53,9 @@ public class TopMusic {
 
 		/*
 		 * Cancion aux = lista.get(posicion); lista.set(posicion,
-		 * lista.get(posicion - 1)); lista.set(posicion - 1, aux);
+		 * lista.get(posicion - 1));
+		 * 
+		 * lista.set(posicion - 1, aux);
 		 */
 		lista.add(lista.remove(posicion - 1));
 		return "\nSe ha bajado un puesto";
@@ -83,7 +85,22 @@ public class TopMusic {
 	 * 
 	 * @param lista
 	 */
-	StringBuilder mostrarLista() {
+//	StringBuilder mostrarLista() {
+//		StringBuilder cadena = new StringBuilder();
+//		int i = 0;
+//		if (lista.isEmpty())
+//			cadena.append("\nLa lista estÃ¡ vacia. Por favor introduzca alguna canciÃ³n");
+//
+//		for (Cancion cancion : lista) {
+//			cadena.append("\n\t" + ++i + ". " + cancion);
+//		}
+//		return cadena;
+//	}
+	
+	
+
+	@Override
+	public String toString() {
 		StringBuilder cadena = new StringBuilder();
 		int i = 0;
 		if (lista.isEmpty())
@@ -92,7 +109,7 @@ public class TopMusic {
 		for (Cancion cancion : lista) {
 			cadena.append("\n\t" + ++i + ". " + cancion);
 		}
-		return cadena;
+		return cadena.toString();
 	}
 
 	/**

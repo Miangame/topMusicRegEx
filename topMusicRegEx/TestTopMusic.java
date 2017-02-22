@@ -4,12 +4,12 @@ import utiles.Menu;
 import utiles.Teclado;
 
 /**
- * TopMusic. Implementa un programa que gestione una lista de las canciones mÃ¡s
- * escuchadas. El usuario podrÃ¡: a. AÃ±adir una canciÃ³n (en una posiciÃ³n) al
- * TopMusic. b. Sacar un elemento del TopMusic. c. Subir un puesto en el
- * TopMusic. d. Bajar un puesto en el TopMusic. e. Mostrar la lista TopMusic. f.
- * Mostrar la canciÃ³n mÃ¡s escuchada. Sobre la canciÃ³n se almacenarÃ¡ el
- * tÃ­tulo, artista o grupo y aÃ±o de grabaciÃ³n.
+ * TopMusic. Implementa un programa que gestione una lista de las canciones
+ * mÃ¡s escuchadas. El usuario podrÃ¡: a. AÃ±adir una canciÃ³n (en una
+ * posiciÃ³n) al TopMusic. b. Sacar un elemento del TopMusic. c. Subir un
+ * puesto en el TopMusic. d. Bajar un puesto en el TopMusic. e. Mostrar la lista
+ * TopMusic. f. Mostrar la canciÃ³n mÃ¡s escuchada. Sobre la canciÃ³n se
+ * almacenarÃ¡ el tÃ­tulo, artista o grupo y aÃ±o de grabaciÃ³n.
  * 
  * @author Miguel Ã�ngel GavilÃ¡n Merino
  *
@@ -81,7 +81,7 @@ public class TestTopMusic {
 		if (lista.isEmpty()) {
 			System.out.println("La lista est� vac�a. Por favor introduzca elementos.");
 		} else {
-			System.out.println(lista.mostrarLista());
+			System.out.println(lista);
 		}
 	}
 
