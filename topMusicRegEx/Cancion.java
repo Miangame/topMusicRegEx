@@ -60,9 +60,7 @@ public class Cancion {
 	 * @return Cancion
 	 */
 	static Cancion getInstance(String titulo, String artista, int anioGrabacion) {
-		String anio = Integer.toString(anioGrabacion);
-		if (!(titulo.matches(".{2,}") && artista.matches(".{2,}") && anio.matches("19\\d{2}|2\\d{3}")
-				&& anioGrabacion <= anioActual))
+		if (!(titulo.matches(".{2,}") && artista.matches(".{2,}") && anioGrabacion>=1900 && anioGrabacion <= anioActual))
 			return null;
 
 		return new Cancion(titulo, artista, anioGrabacion);
