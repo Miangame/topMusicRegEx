@@ -60,10 +60,19 @@ public class Cancion {
 	 * @return Cancion
 	 */
 	static Cancion getInstance(String titulo, String artista, int anioGrabacion) {
-		if (!(titulo.matches(".{2,}") && artista.matches(".{2,}") && anioGrabacion>=1900 && anioGrabacion <= anioActual))
+		if (!(comprobarTituloAutor(titulo) && comprobarTituloAutor(artista) && comprobarAnio(anioGrabacion)
+				&& anioGrabacion <= anioActual))
 			return null;
 
 		return new Cancion(titulo, artista, anioGrabacion);
+	}
+
+	private static boolean comprobarAnio(int anioGrabacion) {
+		return anioGrabacion >= 1900;
+	}
+
+	private static boolean comprobarTituloAutor(String titulo) {
+		return titulo.matches("([\\-´,a-zA-ZáéíóúÁÉÍÓÚñÑ0-9]+\\s?)+");
 	}
 
 	public String getTitulo() {
